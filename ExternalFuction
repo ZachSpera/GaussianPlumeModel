@@ -1,2 +1,5 @@
-function [Concentration] = GaussianPlumeModel[Z0,Z,ISR,X,V,D,P,T,Y]
-end 
+function [Concentration] = GaussianPlumeModel[U0,Z0,Z1,Z,ISR,X,V,D,P,T,Y]
+P = .25
+U1 = U0*(Z1/Z0)^P
+Ug = U0*(Z1/10)^P
+end
