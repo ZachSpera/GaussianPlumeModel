@@ -5,5 +5,18 @@ p = .25
 U1 = U0*(Z1/Z0)^P
 %Calculation for speed at ground 
 Ug = U0*(Z1/10)^P
+%Initializing class chart
 Class = ['A', 'B', 'B' ; 'B', 'B', 'C' ; 'B', 'C', 'C', ; 'C', 'D', 'D', ; 'C', 'D', 'D']
+row = 1
+%Finding Row 
+if Ug < 2
+    row = 1
+elseif Ug < 3 & Ug > 2
+    row = 2 
+elseif Ug < 3 & Ug > 4
+    row = 3
+elseif Ug < 5 & Ug > 4
+    row = 4
+else  
+    row = 5
 end
