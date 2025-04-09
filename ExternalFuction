@@ -1,5 +1,9 @@
 function [Concentration] = GaussianPlumeModel[U0,Z0,Z1,Z,ISR,X,V,D,P,T,Y]
-P = .25
+%Initialize lowercase p as standard deviation of plume and is .25 
+p = .25
+%Calculation for speed at stack
 U1 = U0*(Z1/Z0)^P
+%Calculation for speed at ground 
 Ug = U0*(Z1/10)^P
 end
+
