@@ -1,4 +1,4 @@
-function [Concentration] = GaussianPlumeModel[U0,Z0,Z1,Z,ISR,X,V,R2,P,T,Y]
+function [Concentration] = GaussianPlumeModel[U0,Z0,Z1,Z,ISR,X,V,R2,P,Ts,Ta,Y,h]
 %Initialize lowercase p as standard deviation of plume and is .25 
 p = .25
 %Calculation for speed at stack
@@ -57,5 +57,13 @@ c = dispersionTable(DispersionRow,2)
 d = dispersionTable(DispersionRow,3)
 f = dispersionTable(DispersionRow,4)
 
+%Calculating veritical and horizontal dispersion coefficents
 sigmaz = c * x^d + f 
-sigmay = a*x^0.894
+sigmay = a * x^0.894
+
+%Calculate plume rise
+dh = ((v * d) / u) * (1.5 + 0.0268 * P * d((Ts - Ta)/Ts)) 
+
+%Effective height 
+H = dh + h
+
