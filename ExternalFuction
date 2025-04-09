@@ -5,5 +5,5 @@ p = .25
 U1 = U0*(Z1/Z0)^P
 %Calculation for speed at ground 
 Ug = U0*(Z1/10)^P
+Class = ['A', 'B', 'B' ; 'B', 'B', 'C' ; 'B', 'C', 'C', ; 'C', 'D', 'D', ; 'C', 'D', 'D']
 end
-
