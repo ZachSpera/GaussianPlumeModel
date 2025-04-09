@@ -56,3 +56,6 @@ a = dispersionTable(DispersionRow,1)
 c = dispersionTable(DispersionRow,2)
 d = dispersionTable(DispersionRow,3)
 f = dispersionTable(DispersionRow,4)
+
+sigmaz = c * x^d + f 
+sigmay = a*x^0.894
